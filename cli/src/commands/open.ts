@@ -25,7 +25,10 @@ export async function openCommand(
       const client = await connectToTab(tab.id, port, host);
       await client.Page.enable();
       await client.Page.navigate({ url });
-      await client.Page.loadEventFired();
+      await Promise.race([
+        client.Page.loadEventFired(),
+        new Promise((resolve) => setTimeout(resolve, 10000)),
+      ]);
       await client.close();
       console.log(
         JSON.stringify(

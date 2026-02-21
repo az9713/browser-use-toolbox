@@ -80,8 +80,6 @@ export async function clickCommand(
     const coords: { x: number; y: number; tag: string; text: string } =
       JSON.parse(result.value as string);
 
-    await client.Input.enable();
-
     await client.Input.dispatchMouseEvent({
       type: 'mousePressed',
       x: coords.x,
