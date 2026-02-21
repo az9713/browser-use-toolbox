@@ -1,0 +1,22 @@
+{
+  "name": "chrome-cdp-agent",
+  "version": "1.0.0",
+  "description": "CLI tool to interact with Chrome tabs via CDP",
+  "type": "module",
+  "main": "dist/browser.js",
+  "bin": {
+    "browser": "dist/browser.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "chrome-remote-interface": "^0.33.2",
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
+}

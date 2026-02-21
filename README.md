@@ -166,6 +166,28 @@ Each module is a self-contained building block for agentic browser control.
 
 ---
 
+## 🖥️ CLI Tool (42 Commands)
+
+The **`cli/`** directory contains a unified command-line tool that wraps all 35 toolbox modules (plus new commands) into flat, JSON-outputting CLI commands. Designed for AI agents like Claude Code to control Chrome via simple shell calls.
+
+```bash
+cd cli && npm install && npm run build
+bash scripts/start-chrome.sh
+node dist/browser.js list
+node dist/browser.js open https://example.com
+node dist/browser.js screenshot 0
+node dist/browser.js click 0 "More information"
+```
+
+**3 Deliverables:**
+1. **Launcher scripts** (`scripts/`) — Start Chrome with `--remote-debugging-port=9222`
+2. **CLI tool** (`dist/browser.js`) — 42 flat commands, each a separate TypeScript file
+3. **Claude Code skills** (`skills/`) — 42 markdown files teaching the agent each command
+
+See the full **[CLI Documentation](cli/README.md)** for the complete command reference.
+
+---
+
 ## 🤖 Integrating with AI Agents
 
 Each module exports reusable classes. Example integration with an AI agent loop:
