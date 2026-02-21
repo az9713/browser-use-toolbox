@@ -856,6 +856,10 @@ The `skills/` directory contains 42 markdown files, one per command. Each skill 
 | `design-review` | 35-design-reviewer |
 | `search` | **NEW** (not in toolbox) |
 
+## Testing
+
+See [docs/TESTING_GUIDE.md](docs/TESTING_GUIDE.md) for a comprehensive guide on how to launch headless Chrome, test all 42 CLI commands, and run automated test scripts (Bash + PowerShell).
+
 ## License
 
 MIT
